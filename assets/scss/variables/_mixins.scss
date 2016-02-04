@@ -1,0 +1,46 @@
+/* LINK STYLE */
+
+@mixin linkGeneral {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: $menuLink;
+  font-weight: normal;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+@mixin linkHover {
+  text-decoration: none;
+  color: $menuLink;
+}
+
+/* BUTTON STYLE */
+@mixin buttonGeneral {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* MENU */
+@mixin menu-link {
+  font-size: 14px;
+  padding: 10px 20px;
+  color: $menuLink;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+@mixin menu-linkHover{
+  padding: 10px 20px;
+  color: $menuLink;
+  background-color: $menuLink-hover;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+@mixin menuOpen {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
