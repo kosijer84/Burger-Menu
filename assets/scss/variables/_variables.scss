@@ -7,11 +7,12 @@ $gray: rgba(245,245,245,1);
 $grayDark: rgba(76,76,76,1);
 $white: rgba(255,255,255,1);
 $green: rgba(166,173,85,1);
+$black: rgb(0,0,0);
 
 
 /* Background colors */
 
-$primaryColor-background: $grayDark;
+$primaryColor-background: $black;
 $secondaryColor-background: $white;
 $primaryColor-font: $white;
 

@@ -1,29 +1,17 @@
-
-/*** TEXT ON HOME PAGE ***/
-
-(function() {
-
-    var quotes = $(".quotes");
-    var quoteIndex = -1;
-
-    function showNextQuote() {
-        ++quoteIndex;
-        quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(1000)
-            .delay(2000)
-            .fadeOut(1000, showNextQuote);
-    }
-
-    showNextQuote();
-
-})();
-
 /*** OPEN MENU ***/
 
 $(document).ready(function() {
     $('#showmenu').click(function() {
+
+
         $('.menu').toggleClass("open");
         $('.burger').toggleClass("selected");
+
+        setTimeout(function(){
+            $(".active").addClass("active-background");
+        }, 850);
+
+        $(".active").removeClass("active-background");
 
         var windowWidth = $(window).width();
         var smaller = 768;
@@ -31,11 +19,7 @@ $(document).ready(function() {
             $('.menu').addClass("navbar-small");
         }
     });
-
-
 });
-
-
 
 
 /* SHOW NAVBAR AFTER 50PX AND OPEN MENU */
@@ -77,20 +61,4 @@ $('.carousel-linked-nav > li > a').click(function() {
 
     // don't follow the link
     return false;
-});
-
-/* AUTOPLAY NAV HIGHLIGHT */
-
-// bind 'slid' function
-$('#myminiCarousel').bind('slid', function() {
-
-    // remove active class
-    $('.carousel-linked-nav .active').removeClass('active');
-
-    // get index of currently active item
-    var idx = $('#myCarousel .item.active').index();
-
-    // select currently active item and add active class
-    $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-
 });

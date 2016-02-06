@@ -5,7 +5,7 @@
 /* BUTTON STYLE */
 /* MENU */
 body {
-  background: #4c4c4c;
+  background: black;
   color: white; }
 
 a {
@@ -31,6 +31,9 @@ button {
   .container {
     width: 950px; } }
 /***   MAIN MENU   ***/
+.navbar-brand {
+  margin-top: 20px; }
+
 .navbar-wrapper {
   background-color: rgba(41, 89, 148, 0.7);
   margin: 0 auto;
@@ -39,8 +42,14 @@ button {
   position: relative;
   z-index: 1000; }
 
-li.active a {
-  background-color: #687ca5; }
+.active-background a {
+  padding: 10px 20px;
+  color: white;
+  background-color: #687ca5;
+  border-radius: 20px;
+  text-decoration: none;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s; }
 
 .navbar-burger {
   float: right;
