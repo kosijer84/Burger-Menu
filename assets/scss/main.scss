@@ -32,6 +32,10 @@ button {
 
 
 /***   MAIN MENU   ***/
+.navbar-brand {
+ margin-top:20px;
+}
+
 .navbar-wrapper {
   background-color: rgba(41, 89, 148, .7);
   margin: 0 auto;
@@ -40,9 +44,13 @@ button {
   position: relative;
   z-index: 1000;
 }
-li.active a {
-  background-color: #687ca5;
+
+.active-background a{
+  @include menu-linkHover;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
+
 .navbar-burger {
   float: right;
   position: relative;
@@ -252,7 +260,6 @@ li.active a {
   height: 108px;
   border-bottom: 1px solid rgba(255, 255, 255, .7);
 }
-
 
 
 
